@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 
     private void initData() {
         for (int i = 0; i < 20; i++) {
-            strings.add("第" + i + "条测试数据====");
+            strings.add("第" + i + "条测试数据====~");
         }
     }
 
@@ -77,11 +77,9 @@ public class MainActivity extends Activity {
         ControlRvSpeedLinearLayoutManager controlRvSpeedLinearLayoutManager = new ControlRvSpeedLinearLayoutManager(MainActivity.this, new ControlRvSpeedLinearLayoutManager.StopScrollCallBack() {
             @Override
             public void scrollStop(final int position) {
-                Log.i("滚动demo","====="+position+"=====");
                 handler.sendEmptyMessageDelayed(0,1000);
             }
         },ControlRvSpeedLinearLayoutManager.EXTREMELY_SLOW);
-        final LinearLayoutManager mLayoutManager = new LinearLayoutManager(MainActivity.this);
         rvTextList.setLayoutManager(controlRvSpeedLinearLayoutManager);
         rvTextList.addItemDecoration(new SpaceItemDecoration(20));
         rvTextList.setAdapter(recyclerAdapter);
