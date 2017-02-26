@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 
     private void initData() {
         for (int i = 0; i < 20; i++) {
-            strings.add("第" + i + "条测试数据====~");
+            strings.add("第" + i + "条测试数据====~a");
         }
     }
 
